@@ -13,7 +13,7 @@ services:
     depends_on:
       - mysql
     ports:
-      - "8090:8090"
+      - "10987:8090"
     volumes:
       - ./confluence:/var/confluence
     restart: always
@@ -31,7 +31,7 @@ services:
       - MYSQL_PASSWORD=123123
     command: ['mysqld', '--character-set-server=utf8', '--collation-server=utf8_bin', '--transaction-isolation=READ-COMMITTED', '--innodb_log_file_size=256M', '--max_allowed_packet=256M']
     ports:
-      - "13306:3306"
+      - "4044:3306"
     volumes:
       - ./mysql:/var/lib/mysql
     restart: always
