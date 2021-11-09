@@ -1,7 +1,9 @@
 version: '3.4'
 services:
   confluence:
-    image: haxqer/confluence
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: confluence-srv
     environment:
       - TZ='Asia/Shanghai'
